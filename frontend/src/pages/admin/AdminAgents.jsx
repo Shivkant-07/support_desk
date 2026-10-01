@@ -66,6 +66,8 @@ export const AdminAgents = () => {
     fetchAgents();
   }, [fetchAgents]);
 
+
+
   const handleOpenAddModal = () => {
     setIsEditing(false);
     setEditingAgentId(null);
@@ -96,6 +98,12 @@ export const AdminAgents = () => {
     setIsModalOpen(true);
   };
 
+
+
+
+
+
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setFormError('');
@@ -125,6 +133,11 @@ export const AdminAgents = () => {
       setModalLoading(false);
     }
   };
+
+
+
+
+
 
   const handleToggleStatus = async () => {
     if (!selectedAgentForToggle) return;
@@ -356,6 +369,8 @@ export const AdminAgents = () => {
         </div>
       </div>
 
+
+
       {/* Add / Edit Agent Modal */}
       <Modal
         isOpen={isModalOpen}
@@ -430,6 +445,9 @@ export const AdminAgents = () => {
                 onChange={(e) => setFormData({ ...formData, status: e.target.value })}
                 className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none"
               >
+
+
+
                 <option value="active">Active</option>
                 <option value="inactive">Inactive</option>
               </select>
@@ -466,6 +484,8 @@ export const AdminAgents = () => {
           </div>
         </form>
       </Modal>
+
+
 
       {/* Confirm Status Toggle */}
       <ConfirmDialog

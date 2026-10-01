@@ -12,17 +12,32 @@ export const agentService = {
     return await api.get(`/agents${queryString}`);
   },
 
+
+  
   createAgent: async (agentData) => {
     return await api.post('/agents', agentData);
   },
+
+
+
+
+
+
 
   updateAgent: async (id, agentData) => {
     return await api.put(`/agents/${id}`, agentData);
   },
 
+
+
+
+
   toggleAgentStatus: async (id) => {
     return await api.put(`/agents/${id}/status`, {});
   },
+
+
+
 
   deleteAgent: async (id) => {
     return await api.delete(`/agents/${id}`);
